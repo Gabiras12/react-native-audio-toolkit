@@ -1,5 +1,4 @@
 import React from 'react';
-import {AppRegistry} from 'react-native';
 import AppContainer from './src/AppContainer';
 
 class ExampleApp extends React.Component {
@@ -10,4 +9,4 @@ class ExampleApp extends React.Component {
   }
 }
 
-AppRegistry.registerComponent('ExampleApp', () => ExampleApp);
+export default ExampleApp

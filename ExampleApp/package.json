@@ -1,14 +1,23 @@
 {
-  "name": "ExampleApp",
+  "name": "exampleapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
   },
   "dependencies": {
-    "react": "15.2.0",
-    "react-native": "0.29.0",
-    "react-native-audio-toolkit": "file:../",
-    "react-native-button": "^1.6.0"
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-audio-toolkit": "file:../"
+  },
+  "devDependencies": {
+    "babel-jest": "23.4.0",
+    "babel-preset-react-native": "^5",
+    "jest": "23.4.1",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
