@@ -19,36 +19,11 @@ let filename = 'test.mp4';
 class AppContainer extends React.Component {
   constructor() {
     super();
-
-    this.state = {
-      playPauseButton: 'Preparing...',
-      recordButton: 'Preparing...',
-
-      stopButtonDisabled: true,
-      playButtonDisabled: false,
-      recordButtonDisabled: true,
-
-      loopButtonStatus: false,
-      progress: 0,
-
-      error: null
-    };
-  }
-
-  componentWillUnmount() {
-    //console.log('unmount');
-    // TODO
-    clearInterval(this._progressInterval);
-  }
-
-  _shouldUpdateProgressBar() {
-    // Debounce progress bar update by 200 ms
-    return Date.now() - this.lastSeek > 200;
   }
 
   _playPause() {
-    console.log('oi')
-    new Player('https://example.com/test.mp3').play();
+    this.player = new Player('https://d27stng4hz4vj7.cloudfront.net/music.mp3');
+    this.player.play();
   }
 
   render() {
@@ -64,7 +39,7 @@ class AppContainer extends React.Component {
             <View style={{flex:1 , marginRight:10}} >
               <Button 
                 onPress={() => this._playPause()}
-                title={this.state.playPauseButton}
+                title='Play'
               />
             </View>
           </View>
